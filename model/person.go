@@ -138,7 +138,7 @@ func PersonDelete(ctx context.Context) (string, error) {
   
     db, ok := ctx.Value("db").(*sql.DB)
     if !ok {
-        return "false", errors.New("mMdel person: could not get database connection pool from context")
+        return "false", errors.New("Model person: could not get database connection pool from context")
     }
 
     sql := "DELETE FROM `person` WHERE id = ?";
